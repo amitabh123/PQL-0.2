@@ -5,7 +5,7 @@ public class Sample {
 	public static void main (String[] args) {
 		UserControlledType innocent = new UserControlledType (false);
 		UserControlledType guilty = new UserControlledType (true);
-		
+		// static analysis start
 		System.out.println ("Untainted use:");
 		scs.use ("SELECT * FROM logins WHERE name='"+"application"+
 			 "' AND password = '"+"password"+"'");
