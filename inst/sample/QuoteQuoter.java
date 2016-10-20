@@ -19,7 +19,6 @@ public class QuoteQuoter {
 		SystemCriticalSink scs = scs_a[0];
 		
 		/* Find all ranges in f that match input strings. */
-
 		LinkedList /*<Range>*/ l = new LinkedList();
 
 		for (int i = 0; i < i_unsafe.length; i++) 
