@@ -2,7 +2,7 @@ package sample;
 
 public class UserControlledType {
 	private boolean attacker;
-
+// wrapper ???
 	public UserControlledType (boolean attacker) {
 		this.attacker = attacker;
 	}
