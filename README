@@ -1,0 +1,25 @@
+This archive contains a binary release of PQL 0.2, including the
+bddbddb-based static analysis framework.  The bin/examples directory
+contains shell scripts for exercising a simple application that
+simulates a database application.
+
+- uninstrumented.sh runs the base application.
+
+- simple_inject.sh instruments the application to count SQL injection
+  vulnerabilities, then runs the instrumented application.
+
+- simple_react.sh instruments it to attempt to render unsafe input
+  safe.
+
+- static_demo.sh is like simple_inject.sh, but it uses static analysis
+  to remove unnecessary instrumentation points.  In this simple
+  application, there is only one point in the full application that
+  isn't actually directly part of a match (the "untainted use" at the
+  very beginning).  This script does not clean up the instrumentation
+  lists - examples/simple_inject.points and
+  examples/simple_inject-opt.points show the possibly relevant points
+  in the target application.
+
+The static analysis system is held together with a sizable Python
+script, and so Python must be installed on your system to run
+static_demo.sh.
